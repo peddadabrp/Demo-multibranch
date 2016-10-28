@@ -32,7 +32,7 @@ node ('linux'){
        //sh "git remote add origin git@github.com:peddadabrp/sample-maven-project.git"
        //sh "git push --repo https://peddadabrp:chinnuchinnu07@github.com/peddadabrp/sample-maven-project.git --all"
        //sh "git push -u --all"
-       sh "git push origin --all"
+       sh "git push origin master"
        sh "sleep 1"
        
     }
