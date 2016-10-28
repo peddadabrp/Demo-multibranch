@@ -10,6 +10,9 @@ node ('linux'){
        sh "mkdir preparation && cd preparation"
        checkout([$class: 'GitSCM', branches: [[name: 'master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/peddadabrp/Demo-multibranch.git']]])
        sh "cp Jenkinsfile ../"
+       sh "git add ."
+       sh "git commit -m 'new commit'"
+       sh "git push origin master"
        sh "rm -rf preparation"
        sh "sleep 1"
        
