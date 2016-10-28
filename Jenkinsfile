@@ -7,23 +7,24 @@ node ('linux'){
     stage('Preparation') { // for display purposes
       // Get some code from a GitHub repository
        //sh "git clone https://peddadabrp:chinnuchinnu07@github.com/peddadabrp/Demo-multibranch.git"
-       sh "git clone https://github.com/peddadabrp/Demo-multibranch.git"
+       //sh "git clone https://github.com/peddadabrp/Demo-multibranch.git"
+       checkout([$class: 'GitSCM', branches: [[name: 'master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/peddadabrp/sample-maven-project.git']]])
        //sh "ls -lart && mkdir preparation && cd preparation && ls -lart && pwd "
        //sh "git clone https://peddadabrp:chinnuchinnu07@github.com/peddadabrp/multibranch-build-scripts.git"
        sh "git clone https://github.com/peddadabrp/multibranch-build-scripts.git"
-       sh "cd multibranch-build-scripts/"
+       //sh "cd multibranch-build-scripts/"
        sh "ls -lart"
-       sh "yes | cp -rf multibranch-build-scripts/Jenkinsfile Demo-multibranch/"
+       sh "yes | cp -rf multibranch-build-scripts/Jenkinsfile ."
        //sh "cd ../"
        sh "ls -lart"
        sh "rm -rf preparation"
-       sh "cd Demo-multibranch/"
+       //sh "cd Demo-multibranch/"
        sh "ls -lart"
        sh "git status"
        sh "git checkout devel-1"
        sh "git add ."
        sh "git commit -m 'new commit'"
-       sh "git push origin devel-1"
+       sh "git push origin master"
        sh "sleep 1"
        
     }
