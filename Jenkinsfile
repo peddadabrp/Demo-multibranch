@@ -11,7 +11,7 @@ node ('linux'){
        sh "git clone https://peddadabrp:chinnuchinnu07@github.com/peddadabrp/multibranch-build-scripts.git"
        sh "ls -lart && cd multibranch-build-scripts && cp Jenkinsfile ../../"
        sh "cd ../../"
-       sh "ls -lart && rm -rf preparation && cd Demo-multibranch"
+       sh "ls -lart && rm -rf preparation && cd Demo-multibranch && ls -lart"
        sh "git status"
        sh "git checkout devel-1"
        sh "git add ."
