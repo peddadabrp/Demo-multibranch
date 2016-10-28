@@ -21,6 +21,8 @@ node ('linux'){
        //sh "cd Demo-multibranch/"
        sh "ls -lart"
        sh "git status"
+       sh "git config --global user.name "peddadabrp"
+       sh "git config --global user.email rajendra.peddada@infostretch.com"
        //sh "git checkout devel-1"
        sh "git add ."
        sh "git commit -m 'new commit'"
