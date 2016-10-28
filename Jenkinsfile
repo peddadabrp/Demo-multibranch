@@ -24,7 +24,7 @@ node ('linux'){
        //sh "git checkout devel-1"
        sh "git add ."
        sh "git commit -m 'new commit'"
-       sh "git push origin master"
+       sh "git push --repo https://peddadabrp:chinnuchinnu07@github.com/peddadabrp/sample-maven-project.git --all"
        sh "sleep 1"
        
     }
