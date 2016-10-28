@@ -13,7 +13,7 @@ node ('linux'){
        sh "git clone https://github.com/peddadabrp/multibranch-build-scripts.git"
        sh "cd multibranch-build-scripts/"
        sh "ls -lart"
-       sh "yes | cp -rf Jenkinsfile ../Demo-multibranch/"
+       sh "yes | cp -rf Jenkinsfile Demo-multibranch/"
        sh "cd ../"
        sh "ls -lart"
        sh "rm -rf preparation"
