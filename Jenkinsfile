@@ -26,7 +26,7 @@ node ('linux'){
        //sh "git checkout devel-1"
        sh "git add ."
        sh "git commit -m 'new commit'"
-       sh 'Git pull'
+       sh 'git pull'
        //sh "git remote add origin git@github.com:peddadabrp/sample-maven-project.git"
        //sh "git push --repo https://peddadabrp:chinnuchinnu07@github.com/peddadabrp/sample-maven-project.git --all"
        sh "git push -u --all"
