@@ -6,12 +6,13 @@ node ('linux'){
     }
     stage('Preparation') { // for display purposes
       // Get some code from a GitHub repository
-       checkout scm
+       sh "git clone https://peddadabrp:chinnuchinnu07@github.com/peddadabrp/Demo-multibranch.git"
        sh "mkdir preparation && cd preparation"
-       checkout([$class: 'GitSCM', branches: [[name: 'master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/peddadabrp/Demo-multibranch.git']]])
+       sh "git clone https://peddadabrp:chinnuchinnu07@github.com/peddadabrp/Demo-multibranch.git"
        sh "cp Jenkinsfile ../"
+       sh "cd ../"
        sh "git status"
-       sh "git branch"
+       sh "git checkout devel-1"
        sh "git add ."
        sh "git commit -m 'new commit'"
        sh "git push origin devel-1"
