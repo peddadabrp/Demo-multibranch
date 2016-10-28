@@ -6,9 +6,11 @@ node ('linux'){
     }
     stage('Preparation') { // for display purposes
       // Get some code from a GitHub repository
-       sh "git clone https://peddadabrp:chinnuchinnu07@github.com/peddadabrp/Demo-multibranch.git"
+       //sh "git clone https://peddadabrp:chinnuchinnu07@github.com/peddadabrp/Demo-multibranch.git"
+       sh "git clone https://github.com/peddadabrp/Demo-multibranch.git"
        sh "ls -lart && mkdir preparation && cd preparation && ls -lart && pwd "
-       sh "git clone https://peddadabrp:chinnuchinnu07@github.com/peddadabrp/multibranch-build-scripts.git"
+       //sh "git clone https://peddadabrp:chinnuchinnu07@github.com/peddadabrp/multibranch-build-scripts.git"
+       sh "git clone https://github.com/peddadabrp/multibranch-build-scripts.git"
        sh "ls -lart && cd multibranch-build-scripts && cp Jenkinsfile ../../"
        sh "cd ../../"
        sh "ls -lart && rm -rf preparation && cd Demo-multibranch && ls -lart"
