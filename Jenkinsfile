@@ -17,7 +17,7 @@ node ('linux'){
        sh "yes | cp -rf multibranch-build-scripts/Jenkinsfile ."
        //sh "cd ../"
        sh "ls -lart"
-       sh "rm -rf preparation"
+       sh "rm -rf multibranch-build-scripts"
        //sh "cd Demo-multibranch/"
        sh "ls -lart"
        sh "git status"
@@ -26,7 +26,8 @@ node ('linux'){
        //sh "git checkout devel-1"
        sh "git add ."
        sh "git commit -m 'new commit'"
-       sh "git push --repo https://peddadabrp:chinnuchinnu07@github.com/peddadabrp/sample-maven-project.git --all"
+       //sh "git push --repo https://peddadabrp:chinnuchinnu07@github.com/peddadabrp/sample-maven-project.git --all"
+       sh "git push origin master"
        sh "sleep 1"
        
     }
