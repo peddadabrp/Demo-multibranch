@@ -24,7 +24,7 @@ node ('linux'){
        sh 'git config --global user.name "peddadabrp"'
        sh "git config --global user.email rajendra.peddada@infostretch.com"
        //sh "git checkout devel-1"
-       sh "git branch --all"
+       sh "git branch -all"
        sh "git checkout master"
        sh "git add ."
        sh "git commit -m 'new commit'"
