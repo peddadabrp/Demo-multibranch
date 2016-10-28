@@ -21,7 +21,7 @@ node ('linux'){
        //sh "cd Demo-multibranch/"
        sh "ls -lart"
        sh "git status"
-       sh "git checkout devel-1"
+       //sh "git checkout devel-1"
        sh "git add ."
        sh "git commit -m 'new commit'"
        sh "git push origin master"
