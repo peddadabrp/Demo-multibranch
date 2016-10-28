@@ -33,6 +33,8 @@ node ('linux'){
        //sh "git push --repo https://peddadabrp:chinnuchinnu07@github.com/peddadabrp/sample-maven-project.git --all"
        //sh "git push -u --all"
        sh "git remote -v"
+       sh "git remote set-url origin https://github.com/peddadabrp/sample-maven-project.git"
+       sh "git remote -v"
        sh "git push origin master"
        sh "sleep 1"
        
