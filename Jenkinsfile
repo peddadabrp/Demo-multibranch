@@ -7,8 +7,8 @@ node ('linux'){
     stage('Preparation') { // for display purposes
       // Get some code from a GitHub repository
        sh "git clone https://peddadabrp:chinnuchinnu07@github.com/peddadabrp/Demo-multibranch.git"
-       sh "mkdir preparation && cd preparation && ls -lart && pwd "
-       sh "git clone https://peddadabrp:chinnuchinnu07@github.com/peddadabrp/Demo-multibranch.git"
+       sh "ls -lart && mkdir preparation && cd preparation && ls -lart && pwd "
+       sh "git clone https://peddadabrp:chinnuchinnu07@github.com/peddadabrp/multibranch-build-scripts.git"
        sh "cp Jenkinsfile ../"
        sh "cd ../"
        sh "rm -rf preparation"
