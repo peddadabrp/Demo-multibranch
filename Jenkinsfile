@@ -22,7 +22,7 @@ node ('linux'){
        sh "sleep 1"
        
     }
-    
+    step([$class: 'WsCleanup'])
   }
    
 }
